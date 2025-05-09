@@ -1,54 +1,45 @@
-
-body {
-  background-color: #000;
-  color: #f0f0f0;
-  font-family: 'Orbitron', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background-color: #111;
-  padding: 2rem;
-  text-align: center;
-  border-bottom: 4px solid #ff007f;
-}
-
-h1 {
-  font-size: 3rem;
-  color: #ff007f;
-  text-shadow: 0 0 10px #ff007f;
-}
-
-.sub {
-  color: #ff4b4b;
-}
-
-.bio, .contact, .gallery {
-  padding: 2rem;
-  max-width: 900px;
-  margin: auto;
-}
-
-.image-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.image-grid img {
-  width: 30%;
+.profile-pic {
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  width: 180px;
   border: 2px solid #ff007f;
-  box-shadow: 0 0 10px #ff007f;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #ff007f;
 }
 
-.glitch-border {
-  border: 4px double #ff007f;
-  animation: glitch 1s infinite;
+.glitch-img-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
 }
 
-@keyframes glitch {
-  0% { border-color: #ff007f; }
-  50% { border-color: #ff4b4b; }
-  100% { border-color: #ff007f; }
+.glitch-img {
+  animation: glitch-pic 1.2s infinite;
+}
+
+@keyframes glitch-pic {
+  0% {
+    transform: translate(0, 0);
+    filter: hue-rotate(0deg);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+    filter: hue-rotate(20deg);
+  }
+  40% {
+    transform: translate(2px, -2px);
+    filter: hue-rotate(40deg);
+  }
+  60% {
+    transform: translate(-1px, 1px);
+    filter: hue-rotate(10deg);
+  }
+  80% {
+    transform: translate(1px, -1px);
+    filter: hue-rotate(30deg);
+  }
+  100% {
+    transform: translate(0, 0);
+    filter: hue-rotate(0deg);
+  }
 }
