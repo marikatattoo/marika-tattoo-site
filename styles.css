@@ -1,7 +1,7 @@
-.profile.profile-pic {
+.profile-pic {
   display: block;
   margin: 0 auto 1.5rem auto;
-  width: 180px !important;
+  width: 180px;
   max-width: 100%;
   height: auto;
   border: 2px solid #ff007f;
@@ -9,39 +9,15 @@
   box-shadow: 0 0 15px #ff007f;
 }
 
-.glitch-img-wrapper {
-  position: relative;
-  display: inline-block;
-  margin: 0 auto;
-}
-
 .glitch-img {
   animation: glitch-pic 1.2s infinite;
 }
 
 @keyframes glitch-pic {
-  0% {
-    transform: translate(0, 0);
-    filter: hue-rotate(0deg);
-  }
-  20% {
-    transform: translate(-2px, 2px);
-    filter: hue-rotate(20deg);
-  }
-  40% {
-    transform: translate(2px, -2px);
-    filter: hue-rotate(40deg);
-  }
-  60% {
-    transform: translate(-1px, 1px);
-    filter: hue-rotate(10deg);
-  }
-  80% {
-    transform: translate(1px, -1px);
-    filter: hue-rotate(30deg);
-  }
-  100% {
-    transform: translate(0, 0);
-    filter: hue-rotate(0deg);
-  }
+  0% { transform: translate(0, 0); filter: hue-rotate(0deg); }
+  20% { transform: translate(-2px, 2px); filter: hue-rotate(20deg); }
+  40% { transform: translate(2px, -2px); filter: hue-rotate(40deg); }
+  60% { transform: translate(-1px, 1px); filter: hue-rotate(10deg); }
+  80% { transform: translate(1px, -1px); filter: hue-rotate(30deg); }
+  100% { transform: translate(0, 0); filter: hue-rotate(0deg); }
 }
