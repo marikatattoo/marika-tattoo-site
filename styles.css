@@ -1,0 +1,54 @@
+
+body {
+  background-color: #000;
+  color: #f0f0f0;
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #111;
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 4px solid #ff007f;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #ff007f;
+  text-shadow: 0 0 10px #ff007f;
+}
+
+.sub {
+  color: #ff4b4b;
+}
+
+.bio, .contact, .gallery {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.image-grid img {
+  width: 30%;
+  border: 2px solid #ff007f;
+  box-shadow: 0 0 10px #ff007f;
+}
+
+.glitch-border {
+  border: 4px double #ff007f;
+  animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+  0% { border-color: #ff007f; }
+  50% { border-color: #ff4b4b; }
+  100% { border-color: #ff007f; }
+}
