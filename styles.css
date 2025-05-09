@@ -1,9 +1,8 @@
 .profile-pic {
+  width: 180px !important;
+  height: auto;
   display: block;
   margin: 0 auto 1.5rem auto;
-  width: 180px;
-  max-width: 100%;
-  height: auto;
   border: 2px solid #ff007f;
   border-radius: 10px;
   box-shadow: 0 0 15px #ff007f;
