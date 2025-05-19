@@ -4,9 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Marika Tattoo</title>
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Your Custom Styles -->
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- PhotoSwipe CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css" />
 </head>
+
 <body>
 
   <header>
@@ -19,33 +27,43 @@
     <div class="section">
       <h2>ABOUT ME</h2>
       <img src="profile-pic.jpg" alt="Marika with pink dreads" class="profile-pic glitch-img" />
-      <p>
+      <p style="text-align: justify;">
         I’m Marika. I'm a punk, nonbinary tattoo artist.<br>
         Fueled by cyberpunk dreams and obsessed with gym.<br>
         I travel, I ink, I share my soul in every piece.<br>
         Since I first picked up a coil machine at eighteen,<br>
         I’ve never looked back.<br>
         What started as a spark of curiosity<br>
-        quickly grew into a lifelong passion and career.<br>
-        
+        quickly grew into a lifelong passion and career.<br><br>
+
         Over the years, I built and ran my own tattoo studio,<br>
         honing my craft and creating meaningful art<br>
-        for clients who trusted me to tell their stories on skin.<br>
+        for clients who trusted me to tell their stories on skin.<br><br>
 
         Now, I find myself at a new crossroads—eager to pack my bags,<br>
         hit the road, and immerse myself in fresh experiences.<br>
         I’m driven by a hunger to explore underground, connect with vibrant cultures,<br>
-        and push my artistry in unexpected directions.<br>
-        
+        and push my artistry in unexpected directions.<br><br>
+
         The world is my next canvas, and I can’t wait to see where this journey takes me.
       </p>
     </div>
 
+    <!-- TATTOO GALLERY WITH PHOTOSWIPE -->
     <div class="section gallery">
       <h2>TATTOOS</h2>
-      <img src="tattoo1.jpeg" alt="Tattoo sample 1">
-      <img src="tattoo2.jpeg" alt="Tattoo sample 2">
-      <img src="tattoo3.jpeg" alt="Tattoo sample 3">
+      
+      <a href="tattoo1.jpeg" data-pswp-width="1200" data-pswp-height="1600" target="_blank">
+        <img src="tattoo1.jpeg" alt="Tattoo sample 1">
+      </a>
+
+      <a href="tattoo2.jpeg" data-pswp-width="1200" data-pswp-height="1600" target="_blank">
+        <img src="tattoo2.jpeg" alt="Tattoo sample 2">
+      </a>
+
+      <a href="tattoo3.jpeg" data-pswp-width="1200" data-pswp-height="1600" target="_blank">
+        <img src="tattoo3.jpeg" alt="Tattoo sample 3">
+      </a>
     </div>
 
     <div class="section">
@@ -58,6 +76,19 @@
   <footer>
     <p>© 2010 Marika Tattoo</p>
   </footer>
+
+  <!-- PHOTOSWIPE JS -->
+  <script type="module">
+    import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.min.js';
+
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: '.gallery',
+      children: 'a',
+      pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.min.js')
+    });
+
+    lightbox.init();
+  </script>
 
 </body>
 </html>
