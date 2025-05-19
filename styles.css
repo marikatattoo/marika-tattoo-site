@@ -18,7 +18,7 @@ h1, h2 {
 .neon-button {
   background-color: transparent;
   color: #ff007f;
-  border: 2px solid #ff007f;
+  border-radius: 10px; solid #ff007f;
   padding: 1rem 2rem;
   font-size: 1.2rem;
   margin: 2rem 1rem; /* Added margin around buttons */
@@ -35,7 +35,7 @@ h1, h2 {
 
 /* Sections */
 .section {
-  border: 2px solid #ff007f;
+  border-radius: 10px; solid #ff007f;
   background-color: #262626;
   padding: 2.5rem; /* Increased internal spacing */
   margin: 3rem auto; /* Increased external spacing */
@@ -54,7 +54,7 @@ h1, h2 {
 .gallery img, .support-crew img {
   width: 100px;
   margin: 1rem; /* Increased space between images */
-  border: 1px solid #ff007f;
+  border-radius: 10px; solid #ff007f;
   transition: transform 0.2s;
   cursor: pointer;
   will-change: transform; /* Prevent layout shifts */
