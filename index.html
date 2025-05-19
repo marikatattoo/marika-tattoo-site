@@ -19,14 +19,14 @@
 
   <header>
     <h1>MARIKA TATTOO</h1>
-    <p class="subtitle">Cyberpunk · Vegan · Traveller</p>
+    <p>Cyberpunk · Vegan · Traveller</p>
     <a class="neon-button" href="mailto:info.marikatattoo@gmail.com">EMAIL ME</a>
   </header>
 
   <main>
     <div class="section">
       <h2>ABOUT ME</h2>
-      <a href="profile-pic.jpg" data-pswp-width="800" data-pswp-height="1000" data-pswp-gallery="about">
+      <a href="profile-pic.jpg" data-pswp-width="800" data-pswp-height="1000" target="_self">
         <img src="profile-pic.jpg" alt="Marika with pink dreads" class="profile-pic" />
       </a>
       <p>
@@ -43,13 +43,13 @@
 
     <div class="section gallery">
       <h2>TATTOOS</h2>
-      <a href="tattoo1.jpeg" data-pswp-width="1200" data-pswp-height="1600" data-pswp-gallery="tattoos">
+      <a href="tattoo1.jpeg" data-pswp-width="1200" data-pswp-height="1600" target="_self">
         <img src="tattoo1.jpeg" alt="Tattoo sample 1" />
       </a>
-      <a href="tattoo2.jpeg" data-pswp-width="1200" data-pswp-height="1600" data-pswp-gallery="tattoos">
+      <a href="tattoo2.jpeg" data-pswp-width="1200" data-pswp-height="1600" target="_self">
         <img src="tattoo2.jpeg" alt="Tattoo sample 2" />
       </a>
-      <a href="tattoo3.jpeg" data-pswp-width="1200" data-pswp-height="1600" data-pswp-gallery="tattoos">
+      <a href="tattoo3.jpeg" data-pswp-width="1200" data-pswp-height="1600" target="_self">
         <img src="tattoo3.jpeg" alt="Tattoo sample 3" />
       </a>
     </div>
@@ -57,13 +57,13 @@
     <div class="section gallery support-crew">
       <h2>SUPPORT CREW</h2>
       <div class="supporter">
-        <a href="kora.jpg" data-pswp-width="800" data-pswp-height="1000" data-pswp-gallery="support">
+        <a href="kora.jpg" data-pswp-width="800" data-pswp-height="1000" target="_self">
           <img src="kora.jpg" alt="Kora the dog looking loyal and punk" />
         </a>
         <p><strong>Kora</strong> — my loyal sidekick, always by my side through long tattoo sessions and road trips. Fierce, fluffy, and full of love.</p>
       </div>
       <div class="supporter">
-        <a href="pey.jpg" data-pswp-width="800" data-pswp-height="1000" data-pswp-gallery="support">
+        <a href="pey.jpg" data-pswp-width="800" data-pswp-height="1000" target="_self">
           <img src="pey.jpg" alt="Pey the cat, forever in my heart" />
         </a>
         <p><strong>Pey</strong> — my sweet cat who now watches over me from another world. You’re forever inked into my soul.</p>
@@ -81,35 +81,37 @@
     <p>© 2010 Marika Tattoo</p>
   </footer>
 
-  <!-- PhotoSwipe UMD -->
+  <!-- PhotoSwipe UMD Script -->
   <script src="https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.umd.min.js"></script>
   <script src="https://unpkg.com/photoswipe@5/dist/photoswipe.umd.min.js"></script>
+
   <script>
+    // PhotoSwipe lightbox init
     const lightbox = new PhotoSwipeLightbox({
-      gallery: '[data-pswp-gallery]',
+      gallery: '.gallery',
       children: 'a',
       pswpModule: PhotoSwipe
     });
     lightbox.init();
-  </script>
 
-  <!-- PhotoSwipe Root -->
-  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="pswp__bg"></div>
-    <div class="pswp__scroll-wrap">
-      <div class="pswp__container">
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-      </div>
-      <div class="pswp__ui pswp__ui--hidden">
-        <div class="pswp__top-bar">
-          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-        </div>
-      </div>
-    </div>
-  </div>
+    // Fade-in effect on scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.section');
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
 
 </body>
 </html>
