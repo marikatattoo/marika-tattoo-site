@@ -41,7 +41,8 @@
     </p>
   </div>
 
-  <div class="section gallery" id="gallery">
+  <!-- Tattoos Gallery -->
+  <div class="section gallery" id="tattoos-gallery">
     <h2>TATTOOS</h2>
     <a href="tattoo1.jpeg" data-pswp-width="1200" data-pswp-height="1600" data-pswp-src="tattoo1.jpeg">
       <img src="tattoo1.jpeg" alt="Tattoo sample 1" />
@@ -54,7 +55,8 @@
     </a>
   </div>
 
-  <div class="section gallery support-crew">
+  <!-- Support Crew Gallery -->
+  <div class="section gallery support-crew" id="crew-gallery">
     <h2>SUPPORT CREW</h2>
     <div class="supporter">
       <a href="kora.png" data-pswp-width="800" data-pswp-height="1000" data-pswp-src="kora.png">
@@ -70,6 +72,7 @@
     </div>
   </div>
 
+  <!-- Contact -->
   <div class="section">
     <h2>CONTACT</h2>
     <p>Email: <a href="mailto:info.marikatattoo@gmail.com">info.marikatattoo@gmail.com</a></p>
@@ -86,17 +89,22 @@
 <script src="https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.umd.min.js"></script>
 <script src="https://unpkg.com/photoswipe@5/dist/photoswipe.umd.min.js"></script>
 
+<!-- Lightbox Setup -->
 <script>
-  const lightbox = new PhotoSwipeLightbox({
-    gallery: '#gallery',
-    children: 'a',
-    pswpModule: PhotoSwipe,
-    zoom: true,
-    pinchToClose: false,
+  const lightboxes = ['#tattoos-gallery', '#crew-gallery'];
+  lightboxes.forEach(id => {
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: id,
+      children: 'a',
+      pswpModule: PhotoSwipe,
+      zoom: true,
+      pinchToClose: false
+    });
+    lightbox.init();
   });
-  lightbox.init();
 </script>
 
+<!-- Custom JS for pinch/double-tap zoom -->
 <script src="scripts.js"></script>
 
 </body>
