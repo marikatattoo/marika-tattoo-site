@@ -55,6 +55,12 @@ h2 {
   width: 100px;
   margin: 0.5rem;
   border: 1px solid #ff007f;
+  transition: transform 0.2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ff007f;
 }
 
 a {
@@ -80,4 +86,49 @@ footer {
   border: 2px solid #ff007f;
   border-radius: 10px;
   box-shadow: 0 0 15px #ff007f;
+}
+
+/* SUPPORT CREW SECTION */
+.support-crew {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.support-crew .supporter {
+  margin-bottom: 30px;
+}
+
+.support-crew img {
+  max-width: 200px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #ff007f;
+  box-shadow: 0 0 15px rgba(255, 0, 200, 0.3);
+  transition: transform 0.2s;
+}
+
+.support-crew img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #ff007f;
+}
+
+.support-crew p {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Optional glow effect for Pey’s memory */
+.support-crew .supporter:last-child img {
+  animation: peyGlow 3s infinite alternate;
+}
+
+@keyframes peyGlow {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 0, 200, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 35px rgba(255, 0, 200, 0.6);
+  }
 }
