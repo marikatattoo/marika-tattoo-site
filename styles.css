@@ -1,50 +1,71 @@
+/* Global Styles */
 body {
   margin: 0;
   background-color: #0a0a0a;
   color: #f0f0f0;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'JetBrains Mono', monospace, Arial, sans-serif; /* Added fallback fonts */
   text-align: center;
 }
+
+/* Headings */
 h1, h2 {
   color: #ff007f;
   text-shadow: 0 0 8px #ff007f;
   text-align: center;
 }
+
+/* Buttons */
 .neon-button {
   background-color: transparent;
   color: #ff007f;
   border: 2px solid #ff007f;
   padding: 1rem 2rem;
   font-size: 1.2rem;
-  margin-top: 2rem;
+  margin: 2rem 1rem; /* Added margin around buttons */
   cursor: pointer;
   text-decoration: none;
-  box-shadow: 0 0 10px #ff007f, inset 0 0 5px #ff007f;
+  box-shadow: 0 0 5px #ff007f, inset 0 0 3px #ff007f; /* Optimized shadow */
 }
+
 .neon-button:hover {
   background-color: #ff007f;
-  color: #0a0a0a;
+  color: #ffffff; /* Improved contrast for accessibility */
   box-shadow: 0 0 20px #ff007f;
 }
+
+/* Sections */
 .section {
   border: 2px solid #ff007f;
   background-color: #262626;
-  padding: 2rem;
-  margin: 2rem auto;
+  padding: 2.5rem; /* Increased internal spacing */
+  margin: 3rem auto; /* Increased external spacing */
   max-width: 700px;
   box-shadow: 0 0 20px #ff007f;
 }
+
+@media (max-width: 768px) {
+  .section {
+    padding: 1.5rem; /* Reduced padding for smaller screens */
+    margin: 1.5rem auto; /* Reduced spacing for smaller screens */
+  }
+}
+
+/* Images */
 .gallery img, .support-crew img {
   width: 100px;
-  margin: 0.5rem;
+  margin: 1rem; /* Increased space between images */
   border: 1px solid #ff007f;
   transition: transform 0.2s;
   cursor: pointer;
+  will-change: transform; /* Prevent layout shifts */
 }
+
 .gallery img:hover, .support-crew img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px #ff007f;
 }
+
+/* Profile Picture */
 .profile-pic {
   width: 180px;
   border: 2px solid #ff007f;
