@@ -1,79 +1,65 @@
 /* BASE SETTINGS */
 body {
   margin: 0;
-  background-color: #0a0a0a; /* nero scuro */
-  color: #f0f0f0; /* bianco sporco */
+  background-color: #0a0a0a; /* nero */
+  color: #f2f0ec; /* bianco sporco */
   font-family: 'Orbitron', sans-serif;
 }
 
 header, main, footer {
   padding: 2rem;
   text-align: center;
-  background-color: #1a1a1a; /* grigio antracite */
-  border: 2px solid #ff007f; /* neon rosa fluo */
-  box-shadow: 0 0 20px #ff007f;
-  border-radius: 8px;
-  margin: 1rem auto;
-  max-width: 900px;
 }
 
 /* HEADINGS */
 h1 {
-  color: #ff007f; /* neon rosa */
+  color: #ff33a8; /* neon rosa fluo */
   font-size: 3rem;
-  /* glow ridotto */
-  text-shadow:
-    0 0 4px #ff007f,
-    0 0 8px #ff007f;
+  text-shadow: 0 0 6px #ff33a8; /* glow più soft */
   margin-bottom: 0.5rem;
 }
 
 h2 {
-  color: #ff007f;
+  color: #ff33a8;
   margin-top: 3rem;
-  text-shadow:
-    0 0 8px #ff007f,
-    0 0 12px #ff007f;
+  text-shadow: 0 0 6px #ff33a8;
+  border-bottom: 2px solid #ff33a8;
+  display: inline-block;
+  padding-bottom: 0.3rem;
 }
 
 /* BUTTONS */
 .neon-button {
   background-color: transparent;
-  color: #ff007f;
-  border: 2px solid #ff007f;
+  color: #ff33a8;
+  border: 2px solid #ff33a8;
   padding: 1rem 2rem;
   font-size: 1.2rem;
   margin-top: 1.5rem;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  transition: 0.3s ease;
-  box-shadow:
-    0 0 10px #ff007f,
-    inset 0 0 5px #ff007f;
-  border-radius: 6px;
+  transition: 0.2s;
+  box-shadow: 0 0 10px #ff33a8, inset 0 0 5px #ff33a8;
 }
 
 .neon-button:hover {
-  background-color: #ff007f;
+  background-color: #ff33a8;
   color: #0a0a0a;
-  box-shadow:
-    0 0 25px #ff007f,
-    inset 0 0 10px #ff007f;
+  box-shadow: 0 0 20px #ff33a8;
 }
 
 /* SECTION CONTAINERS */
 .section {
-  border: 2px solid #ff007f;
-  background-color: #1a1a1a; /* grigio antracite */
+  border: 2px solid #ff33a8;
+  background-color: #262626; /* grigio antracite scuro */
   padding: 2rem;
   margin: 2rem auto;
   max-width: 700px;
-  box-shadow:
-    0 0 20px #ff007f;
+  box-shadow: 0 0 20px #ff33a8;
   text-align: left;
-  border-radius: 8px;
-  color: #f0f0f0;
+
+  /* Fade-in base */
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -88,20 +74,19 @@ h2 {
 .gallery img {
   width: 100px;
   margin: 0.5rem;
-  border: 2px solid #ff007f;
-  border-radius: 6px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #ff33a8;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
 }
 
 .gallery img:hover {
   transform: scale(1.05);
-  box-shadow:
-    0 0 15px #ff007f;
+  box-shadow: 0 0 10px #ff33a8;
 }
 
 /* LINKS */
 a {
-  color: #ff007f;
+  color: #ff33a8;
   text-decoration: none;
 }
 
@@ -112,4 +97,57 @@ a:hover {
 /* FOOTER */
 footer {
   font-size: 0.9rem;
-  color: #ccc; /* leggermente
+  color: #aaa;
+  padding-bottom: 2rem;
+}
+
+/* PROFILE IMAGE */
+.profile-pic {
+  width: 180px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  border: 2px solid #ff33a8;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #ff33a8;
+}
+
+/* SUPPORT CREW */
+.support-crew {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.support-crew .supporter {
+  margin-bottom: 30px;
+}
+
+.support-crew img {
+  max-width: 200px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #ff33a8;
+  box-shadow: 0 0 15px #ff33a8;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.support-crew img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #ff33a8;
+}
+
+.support-crew p {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* CONTACT SECTION */
+.section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
