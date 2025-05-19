@@ -49,18 +49,34 @@ h2 {
   max-width: 700px;
   background-color: #141414;
   box-shadow: 0 0 20px #ff007f;
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.gallery img {
-  width: 100px;
+.section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery img,
+.support-crew img,
+.profile-pic {
+  width: 180px;
+  height: auto;
   margin: 0.5rem;
-  border: 1px solid #ff007f;
+  border-radius: 10px;
+  border: 2px solid #ff007f;
+  box-shadow: 0 0 15px #ff007f;
   transition: transform 0.2s;
+  display: inline-block;
 }
 
-.gallery img:hover {
+.gallery img:hover,
+.support-crew img:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 10px #ff007f;
+  box-shadow: 0 0 20px #ff007f;
 }
 
 a {
@@ -78,38 +94,12 @@ footer {
   padding-bottom: 2rem;
 }
 
-.profile-pic {
-  width: 180px !important;
-  height: auto;
-  display: block;
-  margin: 0 auto 1.5rem auto;
-  border: 2px solid #ff007f;
-  border-radius: 10px;
-  box-shadow: 0 0 15px #ff007f;
-}
-
-/* SUPPORT CREW SECTION */
 .support-crew {
   text-align: center;
-  margin: 50px 0;
 }
 
 .support-crew .supporter {
   margin-bottom: 30px;
-}
-
-.support-crew img {
-  max-width: 200px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  border: 2px solid #ff007f;
-  box-shadow: 0 0 15px rgba(255, 0, 200, 0.3);
-  transition: transform 0.2s;
-}
-
-.support-crew img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px #ff007f;
 }
 
 .support-crew p {
@@ -117,43 +107,4 @@ footer {
   margin: 0 auto;
   font-size: 1rem;
   line-height: 1.5;
-}
-
-/* Optional glow effect for Pey’s memory */
-.support-crew .supporter:last-child img {
-  animation: peyGlow 3s infinite alternate;
-}
-
-@keyframes peyGlow {
-  0% {
-    box-shadow: 0 0 15px rgba(255, 0, 200, 0.3);
-  }
-  100% {
-    box-shadow: 0 0 35px rgba(255, 0, 200, 0.6);
-  }
-  /* Glitch effect */
-@keyframes glitch {
-  0% { transform: translate(0); }
-  20% { transform: translate(-2px, 2px); }
-  40% { transform: translate(2px, -2px); }
-  60% { transform: translate(-1px, 1px); }
-  80% { transform: translate(1px, -1px); }
-  100% { transform: translate(0); }
-}
-
-.glitch-effect {
-  animation: glitch 0.3s;
-}
-
-/* Fade in on scroll */
-.section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.section.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
 }
