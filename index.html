@@ -41,7 +41,7 @@
       </p>
     </div>
 
-    <div class="section gallery tattoos">
+    <div class="section gallery">
       <h2>TATTOOS</h2>
       <a href="tattoo1.jpeg" data-pswp-width="1200" data-pswp-height="1600">
         <img src="tattoo1.jpeg" alt="Tattoo sample 1" />
@@ -73,7 +73,7 @@
     <div class="section">
       <h2>CONTACT</h2>
       <p>Email: <a href="mailto:info.marikatattoo@gmail.com">info.marikatattoo@gmail.com</a></p>
-      <p>Instagram: <a href="https://www.instagram.com/favini_marika_tattoo" target="_blank">@favini_marika_tattoo</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/favini_marika_tattoo" target="_blank" rel="noopener noreferrer">@favini_marika_tattoo</a></p>
     </div>
   </main>
 
@@ -85,21 +85,30 @@
   <script src="https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.umd.min.js"></script>
   <script src="https://unpkg.com/photoswipe@5/dist/photoswipe.umd.min.js"></script>
   <script>
-    // Lightbox per la galleria tatuaggi
-    const tattoosLightbox = new PhotoSwipeLightbox({
-      gallery: '.gallery.tattoos',
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: '.gallery',
       children: 'a',
       pswpModule: PhotoSwipe
     });
-    tattoosLightbox.init();
+    lightbox.init();
+  </script>
 
-    // Lightbox per la galleria support-crew
-    const supportCrewLightbox = new PhotoSwipeLightbox({
-      gallery: '.gallery.support-crew',
-      children: 'a',
-      pswpModule: PhotoSwipe
+  <!-- Fade-in scroll effect -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.section');
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      sections.forEach(section => observer.observe(section));
     });
-    supportCrewLightbox.init();
   </script>
 
 </body>
