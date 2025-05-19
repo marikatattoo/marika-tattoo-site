@@ -6,7 +6,7 @@
   <title>Marika Tattoo</title>
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css" />
@@ -26,30 +26,30 @@
   <main>
     <div class="section">
       <h2>ABOUT ME</h2>
-      <a href="profile-pic.jpg" data-pswp-width="800" data-pswp-height="1000" target="_self">
+      <a href="profile-pic.jpg" data-pswp-width="800" data-pswp-height="1000">
         <img src="profile-pic.jpg" alt="Marika with pink dreads" class="profile-pic" />
       </a>
       <p>
-        I’m Marika. I'm a punk, nonbinary tattoo artist.<br>
-        Fueled by cyberpunk dreams and obsessed with gym.<br>
-        I travel, I ink, I share my soul in every piece.<br>
-        Since I first picked up a coil machine at eighteen, I’ve never looked back.<br><br>
-        Over the years, I built and ran my own tattoo studio, honing my craft and creating meaningful art for clients who trusted me to tell their stories on skin.<br><br>
-        Now, I find myself at a new crossroads—eager to pack my bags, hit the road, and immerse myself in fresh experiences.<br>
-        I’m driven by a hunger to explore underground, connect with vibrant cultures, and push my artistry in unexpected directions.<br><br>
+        I’m Marika. I'm a punk, nonbinary tattoo artist.<br />
+        Fueled by cyberpunk dreams and obsessed with gym.<br />
+        I travel, I ink, I share my soul in every piece.<br />
+        Since I first picked up a coil machine at eighteen, I’ve never looked back.<br /><br />
+        Over the years, I built and ran my own tattoo studio, honing my craft and creating meaningful art for clients who trusted me to tell their stories on skin.<br /><br />
+        Now, I find myself at a new crossroads—eager to pack my bags, hit the road, and immerse myself in fresh experiences.<br />
+        I’m driven by a hunger to explore underground, connect with vibrant cultures, and push my artistry in unexpected directions.<br /><br />
         The world is my next canvas, and I can’t wait to see where this journey takes me.
       </p>
     </div>
 
     <div class="section gallery">
       <h2>TATTOOS</h2>
-      <a href="tattoo1.jpeg" data-pswp-width="1200" data-pswp-height="1600" target="_self">
+      <a href="tattoo1.jpeg" data-pswp-width="1200" data-pswp-height="1600">
         <img src="tattoo1.jpeg" alt="Tattoo sample 1" />
       </a>
-      <a href="tattoo2.jpeg" data-pswp-width="1200" data-pswp-height="1600" target="_self">
+      <a href="tattoo2.jpeg" data-pswp-width="1200" data-pswp-height="1600">
         <img src="tattoo2.jpeg" alt="Tattoo sample 2" />
       </a>
-      <a href="tattoo3.jpeg" data-pswp-width="1200" data-pswp-height="1600" target="_self">
+      <a href="tattoo3.jpeg" data-pswp-width="1200" data-pswp-height="1600">
         <img src="tattoo3.jpeg" alt="Tattoo sample 3" />
       </a>
     </div>
@@ -57,13 +57,13 @@
     <div class="section gallery support-crew">
       <h2>SUPPORT CREW</h2>
       <div class="supporter">
-        <a href="kora.jpg" data-pswp-width="800" data-pswp-height="1000" target="_self">
+        <a href="kora.jpg" data-pswp-width="800" data-pswp-height="1000">
           <img src="kora.jpg" alt="Kora the dog looking loyal and punk" />
         </a>
         <p><strong>Kora</strong> — my loyal sidekick, always by my side through long tattoo sessions and road trips. Fierce, fluffy, and full of love.</p>
       </div>
       <div class="supporter">
-        <a href="pey.jpg" data-pswp-width="800" data-pswp-height="1000" target="_self">
+        <a href="pey.jpg" data-pswp-width="800" data-pswp-height="1000">
           <img src="pey.jpg" alt="Pey the cat, forever in my heart" />
         </a>
         <p><strong>Pey</strong> — my sweet cat who now watches over me from another world. You’re forever inked into my soul.</p>
@@ -73,7 +73,7 @@
     <div class="section">
       <h2>CONTACT</h2>
       <p>Email: <a href="mailto:info.marikatattoo@gmail.com">info.marikatattoo@gmail.com</a></p>
-      <p>Instagram: <a href="https://www.instagram.com/favini_marika_tattoo" target="_blank">@favini_marika_tattoo</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/favini_marika_tattoo" target="_blank" rel="noopener">@favini_marika_tattoo</a></p>
     </div>
   </main>
 
@@ -84,34 +84,16 @@
   <!-- PhotoSwipe UMD Script -->
   <script src="https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.umd.min.js"></script>
   <script src="https://unpkg.com/photoswipe@5/dist/photoswipe.umd.min.js"></script>
-
   <script>
-    // PhotoSwipe lightbox init
     const lightbox = new PhotoSwipeLightbox({
       gallery: '.gallery',
       children: 'a',
       pswpModule: PhotoSwipe
     });
     lightbox.init();
-
-    // Fade-in effect on scroll
-    document.addEventListener('DOMContentLoaded', () => {
-      const sections = document.querySelectorAll('.section');
-
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1 });
-
-      sections.forEach(section => {
-        observer.observe(section);
-      });
-    });
   </script>
 
+  <!-- Custom scripts -->
+  <script src="scripts.js"></script>
 </body>
 </html>
