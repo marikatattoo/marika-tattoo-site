@@ -55,12 +55,10 @@ h2 {
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* Override for paragraphs if needed */
-.section p {
-  font-size: 1rem;
-  line-height: 1.6;
-  text-align: center; /* center paragraph text */
-  margin: 0 auto 1rem auto;
+/* 
+.section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* IMAGE GALLERY */
