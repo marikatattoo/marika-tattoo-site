@@ -41,7 +41,7 @@
       </p>
     </div>
 
-    <div class="section gallery">
+    <div class="section gallery tattoos">
       <h2>TATTOOS</h2>
       <a href="tattoo1.jpeg" data-pswp-width="1200" data-pswp-height="1600">
         <img src="tattoo1.jpeg" alt="Tattoo sample 1" />
@@ -85,12 +85,21 @@
   <script src="https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.umd.min.js"></script>
   <script src="https://unpkg.com/photoswipe@5/dist/photoswipe.umd.min.js"></script>
   <script>
-    const lightbox = new PhotoSwipeLightbox({
-      gallery: '.gallery',
+    // Lightbox per la galleria tatuaggi
+    const tattoosLightbox = new PhotoSwipeLightbox({
+      gallery: '.gallery.tattoos',
       children: 'a',
       pswpModule: PhotoSwipe
     });
-    lightbox.init();
+    tattoosLightbox.init();
+
+    // Lightbox per la galleria support-crew
+    const supportCrewLightbox = new PhotoSwipeLightbox({
+      gallery: '.gallery.support-crew',
+      children: 'a',
+      pswpModule: PhotoSwipe
+    });
+    supportCrewLightbox.init();
   </script>
 
 </body>
