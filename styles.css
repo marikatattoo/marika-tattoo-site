@@ -55,6 +55,19 @@ h2 {
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+/* Override for paragraphs if needed */
+.section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center; /* center paragraph text */
+  margin: 0 auto 1rem auto;
+}
+
+/* HEADINGS */
+h1, h2 {
+  text-align: center;
+}
+
 /* IMAGE GALLERY */
 .gallery img {
   width: 100px;
