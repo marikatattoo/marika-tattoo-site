@@ -1,13 +1,15 @@
 /* BASE SETTINGS */
 body {
   margin: 0;
-  background-color: #0a0a0a; /* nero profondo */
-  color: #f0f0f0; /* bianco sporco */
+  background-color: #0a0a0a;
+  color: #f0f0f0;
   font-family: 'JetBrains Mono', monospace;
+  text-align: center; /* This will center text globally */
 }
 
 /* HEADINGS */
 h1 {
+  text-align: center;
   color: #ff007f; /* rosa neon */
   font-size: 3rem;
   text-shadow: 0 0 5px #ff007f;
@@ -43,18 +45,25 @@ h2 {
 /* SECTION CONTAINERS */
 .section {
   border: 2px solid #ff007f;
-  background-color: #262626; /* grigio antracite */
+  background-color: #262626;
   padding: 2rem;
   margin: 2rem auto;
   max-width: 700px;
   box-shadow: 0 0 20px #ff007f;
-  text-align: left;
-
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+/* Override for paragraphs if needed */
+.section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center; /* center paragraph text */
+  margin: 0 auto 1rem auto;
+}
+
+/* 
 .section.fade-in {
   opacity: 1;
   transform: translateY(0);
