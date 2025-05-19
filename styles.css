@@ -55,12 +55,6 @@ h2 {
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* 
-.section.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* IMAGE GALLERY */
 .gallery img {
   width: 100px;
