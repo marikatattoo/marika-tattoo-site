@@ -85,7 +85,9 @@
       zoom: true,
       pinchToClose: false
     });
-    lightbox.init();
+    lightbox.init();:
+    document.querySelectorAll('#tattoos-gallery a, #crew-gallery a').forEach(link => {
+  link.addEventListener('click', e => e.preventDefault());
   });
 </script>
 <script src="scripts.js"></script>
