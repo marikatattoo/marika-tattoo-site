@@ -52,7 +52,7 @@ h1, h2 {
 
 /* Images */
 .gallery img, .support-crew img {
-  width: 200px;
+  width: 250px;
   margin: 1rem; /* Increased space between images */
   border: 2px solid #ff007f;
   border-radius: 10px; solid #ff007f;
@@ -68,7 +68,7 @@ h1, h2 {
 
 /* Profile Picture */
 .profile-pic {
-  width: 200px;
+  width: 250px;
   border: 2px solid #ff007f;
   border-radius: 10px;
   box-shadow: 0 0 15px #ff007f;
