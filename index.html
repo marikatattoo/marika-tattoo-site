@@ -71,9 +71,13 @@
 </main>
 
 <footer>
-  <p>© 2010 Marika Tattoo</p>
-</footer>
+<p>© 2010–<span id="year"></span> Marika Tattoo</p>
 
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</footer>
+  
 <script>
 <script type="module">
   import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.min.js';
