@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-  margin: 0;
+  margin: 1;
   background-color: #0a0a0a;
   color: #f0f0f0;
   font-family: 'JetBrains Mono', monospace, Arial, sans-serif; /* Added fallback fonts */
@@ -62,7 +62,7 @@ h1, h2 {
 }
 
 .gallery img:hover, .support-crew img:hover {
-  transform: scale(1.05);
+  transform: scale(1.5);
   box-shadow: 0 0 10px #ff007f;
 }
 
