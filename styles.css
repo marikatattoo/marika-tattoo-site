@@ -19,7 +19,7 @@ h1, h2 {
   background-color: transparent;
   color: #ff007f;
   border-radius: 10px; solid #ff007f;
-  padding: 2rem 2rem;
+  padding: 1rem 2rem;
   font-size: 1.2rem;
   margin: 2rem 1rem; /* Added margin around buttons */
   cursor: pointer;
