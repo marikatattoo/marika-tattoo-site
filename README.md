@@ -1,6 +1,6 @@
 # Marika Tattoo Portfolio Website
 
-This is the personal portfolio website of **Marika**, a nonbinary punk tattoo artist fueled by cyberpunk dreams, gym energy, and vegan values. The site showcases tattoos, personal story, and beloved companions Kora (dog) and Pey (cat).
+This is the personal portfolio website of **Marika**, a nonbinary punk tattoo artist fueled by cyberpunk dreams, gym energy, and vegan values. The site showcases tattoos, personal story, and beloved companions Lox (partner), Kora (dog) and Pey (cat).
 
 ## Features
 
